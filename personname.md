@@ -1,0 +1,205 @@
+# Technical Documentation: Vedika Mande Personal Portfolio System
+
+**Engineer / Subject**: Vedika Mande  
+**Project**: Responsive Personal Portfolio Web Application  
+**Version**: 1.0.0  
+**Stack**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+)  
+**Documentation Integrity Compliance**: AIRA Engineering Protocol  
+
+---
+
+## 1. System Overview & Purpose
+
+The **Vedika Mande Personal Portfolio** is an ultra-fast, responsive, minimal web application created to showcase Vedika Mande's software engineering background, academic excellence (Master of Computer Applications, Vishwakarma University; Bachelor of Computer Science, MGM University), project implementations, technical proficiencies, and verified credentials.
+
+### Key Capabilities
+- **Hero & Personal Branding**: Headline, contact chips, dynamic coding widget, active availability badge, and quick action CTAs.
+- **About Me Panel**: Academic background narrative, core engineering pillars (Backend, Databases, Cloud, Modern Web), and personal profile metadata.
+- **Skills Matrix with Interactive Filter**: Filterable grid categorizing Languages, Databases, Web & Backend, and Tools & Cloud with real-time UI toggles.
+- **Project Showcase with In-Depth Modals**: Highlights the *Student Registration Portal* (FastAPI, MongoDB, JWT) and *Career Up Placement Consultant* (CMS, UX Design, Pitching).
+- **Academic Timeline**: Visual chronological history representing MCA (CGPA 9.2), BCS (CGPA 8.13), HSC (76.33%), and SSC (88.20%).
+- **Verified Credentials Gallery**: Dedicated cards for MKCL Java (120 hrs), HackerRank SQL, Infosys Springboard Python, Great Learning OOP, and AWS Cloud Practitioner Essentials.
+- **Contact & Communication Interface**: Client-side validated messaging form with instant feedback toast and copy-to-clipboard email facility.
+- **Theme Engine**: Light/Dark mode toggle with `localStorage` persistence and system media preference fallback.
+- **Repository Setup**: Standard `.gitignore` and comprehensive `README.md` prepared for GitHub publishing.
+
+---
+
+## 2. High-Level System Architecture
+
+The following Mermaid architecture diagram illustrates the component hierarchy and client-side data flows:
+
+```mermaid
+graph TD
+    User["Web Client / Browser"] --> DOM["index.html (Semantic DOM Structure)"]
+    
+    subgraph UI_Layer ["Presentation & UI Layer"]
+        DOM --> Header["Navigation Bar & Theme Switcher"]
+        DOM --> Hero["Hero Banner & Stat Badges"]
+        DOM --> About["About Me & Core Engineering Pillars"]
+        DOM --> Skills["Skills Grid & Filter Controls"]
+        DOM --> Projects["Projects Showcase & Modal Viewer"]
+        DOM --> Education["Education Timeline (MCA, BCS, HSC, SSC)"]
+        DOM --> Certs["Certifications Grid (AWS, Java, SQL, Python)"]
+        DOM --> Contact["Contact Form & Communication Links"]
+        DOM --> Footer["Footer & Scroll to Top"]
+    end
+
+    subgraph Style_System ["Style System (style.css)"]
+        CSSVars["CSS Custom Properties / Design Tokens"]
+        DarkMode["Dark Theme (Default)"]
+        LightMode["Light Theme"]
+        Responsive["Media Queries (Breakpoints: 992px, 768px, 480px)"]
+        CSSVars --> DarkMode
+        CSSVars --> LightMode
+    end
+
+    subgraph Logic_Engine ["Client Runtime Engine (script.js)"]
+        ThemeHandler["Theme Toggle & LocalStorage Sync"]
+        FilterHandler["Interactive Skills Category Filter"]
+        ModalHandler["Dynamic Project Modal Manager"]
+        ScrollSpy["Navbar ScrollSpy Observer"]
+        FormValidator["Contact Form Validation & Toast Notification"]
+        Clipboard["Email Clipboard Copy Action"]
+    end
+
+    UI_Layer -.-> Style_System
+    UI_Layer <--> Logic_Engine
+```
+
+---
+
+## 3. Component Breakdown & Logic Descriptions
+
+### 3.1. Theme Engine (`initThemeToggle`)
+- **Mechanism**: Reads `'theme'` key from browser `localStorage`. Defaults to `'dark'`.
+- **Logic**:
+  - Modifies `data-theme` attribute on `<html>` root (`data-theme="light"` or `data-theme="dark"`).
+  - Triggers toast notification confirming theme switch.
+  - Updates button iconography seamlessly.
+
+### 3.2. Filterable Skills Engine (`initSkillsFilter`)
+- **Mechanism**: Event-driven DOM filtering using data attributes `data-filter` and `data-category`.
+- **Logic Flow**:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User
+    participant FilterBtn as Filter Button
+    participant DOM as Skills Grid
+    participant SkillCard as Skill Cards
+
+    User->>FilterBtn: Clicks Category (e.g., 'Databases')
+    FilterBtn->>FilterBtn: Sets .active state on clicked button
+    FilterBtn->>DOM: Reads data-filter attribute
+    loop Each Skill Card
+        DOM->>SkillCard: Inspects data-category
+        alt Matches Filter or Filter is 'all'
+            SkillCard->>SkillCard: Display 'flex' & fade in opacity
+        else Does Not Match
+            SkillCard->>SkillCard: Display 'none'
+        end
+    end
+```
+
+### 3.3. Project Modal Architecture (`initProjectModal`)
+- Modal data is maintained in a typed JavaScript object dictionary `projectData`.
+- When user clicks `.project-modal-trigger`, the system extracts `data-project` ID, constructs the detailed architecture summary, system flow, and technologies applied, then mounts it to `#modal-content`.
+- Dismissible via close icon, background click, or `Escape` keypress.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Closed
+    Closed --> Opened: User clicks "Project Details"
+    Opened --> Opened: View Architecture & Tech Specs
+    Opened --> Closed: Click Backdrop / Close Button / Escape key
+```
+
+### 3.4. Contact Form Validation Flow (`initContactForm`)
+- Client-side validation validates non-empty name, email regex pattern `^[^\s@]+@[^\s@]+\.[^\s@]+$`, and message length (>10 characters).
+- Emits explicit helper messages under erroneous inputs.
+- Emulates asynchronous dispatch with spinner state and displays a floating Toast message before clearing input buffers.
+
+---
+
+## 4. Data Contracts & Model Schemas
+
+### 4.1. Contact Form Payload Schema
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContactFormPayload",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100,
+      "description": "Full name of the sender"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Valid email address for replies"
+    },
+    "subject": {
+      "type": "string",
+      "maxLength": 150,
+      "description": "Subject or topic of inquiry"
+    },
+    "message": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 2000,
+      "description": "Message body"
+    }
+  },
+  "required": ["name", "email", "message"]
+}
+```
+
+### 4.2. Project Modal Data Object Contract
+
+```json
+{
+  "projectId": {
+    "title": "string",
+    "category": "string",
+    "duration": "string",
+    "stack": ["string"],
+    "summary": "string",
+    "features": ["string"],
+    "architecture": "string"
+  }
+}
+```
+
+---
+
+## 5. Resume Verification Matrix
+
+| Resume Section | Item | Representation in Application |
+|---|---|---|
+| **Personal Info** | Vedika Mande, +91 8767743926, vedikamande14@gmail.com | Header, Hero, Contact Section, Footer |
+| **Education** | MCA @ Vishwakarma University (CGPA 9.2, 2025–2027) | Hero Stat, About Panel, Timeline Card 1 |
+| **Education** | BCS @ MGM University (CGPA 8.13, 2022–2025) | Timeline Card 2 |
+| **Education** | HSC Science (PCMB) @ Deogiri College (76.33%, 2022) | Timeline Card 3 |
+| **Education** | SSC @ S.B. High School (88.20%, 2020) | Timeline Card 4 |
+| **Skills** | Python, Java, SQL, MySQL, MongoDB, AWS, Git/GitHub, Antigravity | Skills Matrix with live categorization |
+| **Project 1** | Student Registration Portal (FastAPI, MongoDB, JWT, Python) | Projects Grid Featured Card & Interactive Modal |
+| **Project 2** | Career Up Placement Consultant (Wix, Pitching, UX, Documentation) | Projects Grid Team Card & Interactive Modal |
+| **Certificates** | KLiC Java Programming (MKCL 120-hr) | Certifications Grid Card 1 |
+| **Certificates** | HackerRank SQL (Basic) | Certifications Grid Card 2 |
+| **Certificates** | Infosys Springboard Basics of Python | Certifications Grid Card 3 |
+| **Certificates** | Great Learning Basics of OOP | Certifications Grid Card 4 |
+| **Certificates** | AWS Cloud Practitioner Essentials | Certifications Grid Card 5 |
+
+---
+
+## 6. Verification & Quality Assurance
+
+- **Responsive breakpoints tested**: Desktop (1440px), Laptop (1024px), Tablet (768px), Mobile (375px).
+- **Accessibility**: ARIA labels on all icon buttons, keyboard navigable modal, high-contrast text color combinations.
+- **Zero dependencies**: No heavy JS frameworks or external CSS bloat; lightning-fast initial paint.
