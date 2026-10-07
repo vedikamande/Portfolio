@@ -298,5 +298,44 @@ flowchart TD
     Profile --> Core_Focus --> Real_Projects
 ```
 
+### Revision 1.4.0 — Technical Skills Simplification & Tooling Cleanup
+- **Change Description**:
+  - Removed the standalone **Login & Authentication** card from the Technical Skills section.
+  - Cleaned the **Developer Tools** card: removed Postman / API Testing and MS Office Suite, strictly retaining **VS Code** and **Antigravity** to align with the candidate's core resume skills summary.
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Removed `Login & Authentication` card from `.skills-grid`.
+    - Simplified Developer Tools card subtitle to `VS Code & Antigravity`.
+    - Retained only `VS Code` and `Antigravity` in the pills list.
+- **Updated Skills Matrix Flowchart**:
+
+```mermaid
+graph TD
+    Skills["Technical Skills Matrix"]
+    
+    subgraph Languages ["Languages"]
+        L1["Python (Primary)"]
+        L2["Java (Core OOP)"]
+        L3["SQL (Queries & Joins)"]
+    end
+    
+    subgraph Databases ["Databases"]
+        D1["MySQL (Relational)"]
+        D2["MongoDB (NoSQL Document)"]
+    end
+    
+    subgraph Cloud_Tools ["Cloud & Developer Tools"]
+        C1["Amazon Web Services (AWS)"]
+        T1["HTML5, CSS3 & JavaScript"]
+        T2["Git & GitHub"]
+        T3["VS Code & Antigravity"]
+    end
+    
+    Skills --> Languages
+    Skills --> Databases
+    Skills --> Cloud_Tools
+```
+
+
 
 
