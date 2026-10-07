@@ -361,6 +361,26 @@ graph TD
     AboutSection --> Profile_Panel
 ```
 
+### Revision 1.6.0 — Python Skill Alignment to Fundamentals (Removal of Data Structures)
+- **Change Description**: Removed references to data structures and advanced algorithmic problem solving from Python descriptions. Accurately mapped Python proficiency to foundational concepts certified by Infosys Springboard: variables, data types, control statements, loops, functions, and basic problem-solving.
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Updated About narrative and Python pillar description.
+    - Updated Python skill card description and pills (`Variables & Types`, `Loops & Conditions`, `Functions`, `Infosys Certified`).
+    - Aligned Infosys Springboard certificate card skills to `Control Statements`, `Loops & Functions`.
+    - Simplified BCS education description.
+- **Python Scope Flowchart**:
+
+```mermaid
+flowchart LR
+    PY["Python Knowledge Scope"] --> C1["Variables & Data Types"]
+    PY --> C2["Control Statements (if-else)"]
+    PY --> C3["Loops (for, while)"]
+    PY --> C4["Functions & Modularity"]
+    PY --> C5["Basic Problem Solving"]
+```
+
+
 
 
 
