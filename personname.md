@@ -490,8 +490,8 @@ flowchart TD
 ### Revision 1.11.0 — Uniform Typography Color for Brand Logo
 - **Change Description**: Unified the font color of the brand logo **Vedika Mande** across both header navigation and footer. Removed the secondary accent color split so that the full name displays in a single, consistent, polished font color (`var(--text-primary)`).
 - **Updated Logic & Component Changes**:
-  - `index.html`: Removed internal `<span>` around "Mande" in `.logo-text`.
-  - `style.css`: Updated `.logo-text` rule to apply `var(--text-primary)` uniformly.
+-   - `index.html`: Removed internal `<span>` around "Mande" in `.logo-text`.
+-   - `style.css`: Updated `.logo-text` rule to apply `var(--text-primary)` uniformly.
 - **Brand Typography Flowchart**:
 
 ```mermaid
@@ -500,13 +500,31 @@ flowchart LR
     VM --> Text["Text: Vedika Mande (Single Uniform Color: --text-primary)"]
 ```
 
+### Revision 1.12.0 — Removal of Sambhajinagar from Starting Page (Retaining Education Section)
+- **Change Description**: Removed Sambhajinagar strictly from the starting hero profile card (standardizing personal base location to `Pune, Maharashtra, India`), while preserving the authentic institutional campus location (`Chhatrapati Sambhajinagar, Maharashtra, India`) across all academic entries in the Education section (MGM University, Deogiri College, and S.B. High School).
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Hero Profile Card: Updated from `Pune / Sambhajinagar, India` to `Pune, Maharashtra, India` (removed from starting section).
+    - Education Timeline (MGM University - BCS, Deogiri College - HSC, S.B. High School - SSC): Preserved institutional location as `Chhatrapati Sambhajinagar, Maharashtra, India`.
+    - Contact Section: Maintained as `Pune, Maharashtra, India`.
+- **Location Architecture & Mapping Flowchart**:
 
-
-
-
-
-
-
-
-
+```mermaid
+flowchart TD
+    Profile["Vedika Mande Portfolio"]
+    
+    subgraph Personal_Location ["Personal Base Location (Sambhajinagar Removed)"]
+        Hero["Hero Profile Card: Pune, Maharashtra, India"]
+        Contact["Contact Section: Pune, Maharashtra, India"]
+    end
+    
+    subgraph Academic_Locations ["Education Section (Retained Actual Campus Locations)"]
+        Edu1["MGM University: Chhatrapati Sambhajinagar, Maharashtra, India"]
+        Edu2["Deogiri College: Chhatrapati Sambhajinagar, Maharashtra, India"]
+        Edu3["S.B. High School: Chhatrapati Sambhajinagar, Maharashtra, India"]
+    end
+    
+    Profile --> Personal_Location
+    Profile --> Academic_Locations
+```
 
