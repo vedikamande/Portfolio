@@ -459,6 +459,35 @@ graph TD
     ProjectCard --> Tech_Stack
 ```
 
+### Revision 1.10.0 — Brand Identity & Career Consultant Scope Alignment
+- **Change Description**:
+  - Updated primary brand text in navigation header and footer from `Vedika.dev` to **Vedika Mande**.
+  - Removed all UI/UX Design references from the **Career Up Placement Consultant** project, ensuring alignment with resume bullet points (Wix website development, MS Word documentation, MS PowerPoint pitch delivery, and team collaboration).
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Updated `.brand-logo` in header and footer to display `Vedika Mande`.
+    - Updated Project 2 category to `Placement Consultancy Platform`.
+    - Updated Project 2 fifth highlight to: *"Strengthened skills in teamwork, documentation, and client-ready presentation delivery."*
+    - Replaced `UI/UX Design` badge tag with `Web Design`.
+  - `script.js`:
+    - Cleaned `projectData['career-consultant']` metadata to remove UI/UX Design.
+- **Brand & Project Mapping Flowchart**:
+
+```mermaid
+flowchart TD
+    Brand["Brand Identity: Vedika Mande"]
+    
+    subgraph Career_Up ["Career Up Placement Consultant Scope"]
+        F1["Platform: Wix Website"]
+        F2["Content: Professional Documentation (MS Word)"]
+        F3["Pitch: Presentation Delivery (MS PowerPoint)"]
+        F4["Core Strength: Teamwork & Communication"]
+    end
+    
+    Brand --> Career_Up
+```
+
+
 
 
 

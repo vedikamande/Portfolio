@@ -11,7 +11,7 @@
 - **Filterable Skills Grid**: Interactive categories: Python & Backend, AWS & Cloud, Languages, Databases, and Developer Tools.
 - **Featured Projects**: In-depth architecture overviews with interactive modal previews:
   - *Student Registration Portal* (Academic Group Project — Python, MongoDB, JWT Authentication, HTML/CSS/JS)
-  - *Career Up Placement Consultant* (CMS, UX Design, Pitching & Documentation)
+  - *Career Up Placement Consultant* (Team Project — Wix, Content Strategy, Presentation & Documentation)
 - **Education Timeline**: Visual chronological history spanning MCA (CGPA 9.2), BCS (CGPA 8.13), HSC, and SSC.
 - **Verified Certifications**: Dedicated credential badges for Core Java (MKCL 120-hr), HackerRank SQL, Infosys Springboard Python, Great Learning OOP, and AWS Cloud Practitioner Essentials.
 - **Interactive Contact Form & Copy Email**: Client-side validated form with toast notifications and one-click email clipboard copy.

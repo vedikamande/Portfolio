@@ -273,17 +273,17 @@ const projectData = {
   },
   'career-consultant': {
     title: 'Career Up Placement Consultant',
-    category: 'Placement Consultancy Platform & UX Design',
+    category: 'Placement Consultancy Website',
     duration: 'Collaborative Project',
-    stack: ['Wix CMS', 'UI/UX Design', 'Content Strategy', 'MS PowerPoint', 'MS Word', 'Client Relations'],
-    summary: 'A collaborative placement consultancy website designed to bridge the opportunity gap between university graduates and corporate recruiters.',
+    stack: ['Wix', 'Content Strategy', 'MS PowerPoint', 'MS Word', 'Teamwork'],
+    summary: 'A collaborative placement consultancy website and pitch presentation designed to connect students with recruiters and placement support services.',
     features: [
-      'Collaborated within a multidisciplinary team to design user flows for students seeking career guidance and placement opportunities.',
-      'Produced comprehensive documentation, structured content blueprints, and site flowcharts using MS Word.',
-      'Constructed and delivered the project pitch deck using MS PowerPoint, presenting core capabilities and student engagement strategy.',
-      'Strengthened interpersonal skills in cross-functional teamwork, client-ready communication, and iterative design reviews.'
+      'Collaborated with a team to design and develop a Placement Consultancy Website using Wix.',
+      'Created professional documents and content plans using MS Word.',
+      'Designed and presented the project pitch using MS PowerPoint, highlighting project goals, features, and outcomes.',
+      'Strengthened skills in teamwork, documentation, and client-ready presentation delivery.'
     ],
-    architecture: 'Recruiter & Student Personas -> Wireframing & UX Blueprints -> Wix Platform Deployment -> Stakeholder Presentation'
+    architecture: 'Requirements & Content (MS Word) -> Wix Website Development -> Project Pitch Presentation (MS PowerPoint)'
   }
 };
 
