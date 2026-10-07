@@ -203,3 +203,26 @@ stateDiagram-v2
 - **Responsive breakpoints tested**: Desktop (1440px), Laptop (1024px), Tablet (768px), Mobile (375px).
 - **Accessibility**: ARIA labels on all icon buttons, keyboard navigable modal, high-contrast text color combinations.
 - **Zero dependencies**: No heavy JS frameworks or external CSS bloat; lightning-fast initial paint.
+
+---
+
+## 7. Change Log & Revision History
+
+### Revision 1.1.0 — Role Precision Alignment (Software Developer)
+- **Change Description**: Removed all mentions of "Full-Stack Developer" across `index.html`, `script.js`, and documentation. Updated the designation strictly to **Software Developer & MCA Scholar**, focusing on core proficiencies in Python, Java, SQL, Database Architecture, and Backend Web APIs.
+- **Updated Logic**:
+  - `index.html`: Refined Hero role chip, About narrative, and Featured project badge.
+  - `script.js`: Updated `projectData['student-portal'].category` to `'Web Application & API'`.
+- **Role Alignment Flowchart**:
+
+```mermaid
+flowchart LR
+    A["User Profile: Vedika Mande"] --> B["Academic Core: MCA @ Vishwakarma Univ (9.2 CGPA)"]
+    A --> C["Languages & Core: Python, Java, SQL, OOP"]
+    A --> D["Databases: MySQL, MongoDB"]
+    A --> E["Backend & Web: FastAPI, JWT, HTML/CSS/JS"]
+    A --> F["Cloud Fundamentals: AWS Practitioner"]
+    
+    B & C & D & E & F --> G["Designation: Software Developer"]
+```
+

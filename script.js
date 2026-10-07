@@ -258,7 +258,7 @@ function initContactForm() {
 const projectData = {
   'student-portal': {
     title: 'Student Registration Portal',
-    category: 'Full-Stack Web Application & API',
+    category: 'Web Application & API',
     duration: 'Academic Project',
     stack: ['Python', 'FastAPI', 'MongoDB', 'JWT Authentication', 'HTML5', 'CSS3', 'JavaScript'],
     summary: 'A web-based academic platform built to manage and automate admissions, CET applications, and student record inquiry with high data integrity and authentication security.',
