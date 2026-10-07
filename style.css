@@ -1165,12 +1165,33 @@ button {
   color: var(--text-primary);
 }
 
+.tech-stack-wrapper {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tech-stack-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.65rem;
+}
+
+.tech-stack-label i {
+  color: var(--accent-primary);
+  margin-right: 0.35rem;
+}
+
 .tech-stack-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin-bottom: 1.75rem;
-  margin-top: auto;
 }
 
 .tag {

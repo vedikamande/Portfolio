@@ -427,6 +427,39 @@ flowchart LR
     Target --> Tech["Stack: Python, MongoDB, HTML, CSS, JS"]
 ```
 
+### Revision 1.9.0 — Dedicated Project Technology Container & UI Polish
+- **Change Description**: Separated technology mentions from the functional achievement bullet points into a dedicated `.tech-stack-wrapper` container with distinct badge styling and uppercase label. This eliminates clumsy inline comma-separated text wrapping and provides a modern, balanced project card presentation.
+- **Updated Logic & Component Changes**:
+  - `style.css`: Added styles for `.tech-stack-wrapper` and `.tech-stack-label` with subtle border separation.
+  - `index.html`:
+    - Updated Project 1 bullet: *"Collaborated with a team to develop a web-based Student Registration Portal."*
+    - Nested technology tags inside `.tech-stack-wrapper` with `Technologies Used:` label.
+    - Synchronized Project 2 with identical structure and `Technologies & Tools:` label.
+- **Project Card Layout Flowchart**:
+
+```mermaid
+graph TD
+    ProjectCard["Project Card"]
+    
+    subgraph Highlights ["Functional Highlights (Bullet Points)"]
+        H1["1. Team collaboration & portal development"]
+        H2["2. Form validation & CET registration"]
+        H3["3. Admin dashboard management"]
+        H4["4. JWT authentication & security"]
+        H5["5. Responsive cross-device UI"]
+    end
+    
+    subgraph Tech_Stack ["Dedicated Tech Stack Container"]
+        Label["Label: Technologies Used"]
+        Pills["Pill Tags: Python | MongoDB | HTML5 | CSS3 | JavaScript | JWT"]
+        Label --> Pills
+    end
+    
+    ProjectCard --> Highlights
+    ProjectCard --> Tech_Stack
+```
+
+
 
 
 
