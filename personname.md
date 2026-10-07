@@ -336,6 +336,32 @@ graph TD
     Skills --> Cloud_Tools
 ```
 
+### Revision 1.5.0 — Removal of Professional Strengths Component
+- **Change Description**: Removed the secondary **Professional Strengths** card containing soft-skill tags from the About Me side column (`.about-info-col`) to create a cleaner, minimalist layout centered on the verified Quick Profile card.
+- **Updated Logic & Component Changes**:
+  - `index.html`: Cleaned lines 283–296 by removing `.tags-cloud` and `.info-card` for Professional Strengths.
+- **Streamlined About Section Architecture**:
+
+```mermaid
+graph TD
+    AboutSection["About Me Section"]
+    
+    subgraph Narrative_Panel ["Main Narrative (Left)"]
+        N1["Personal Bio & MCA Merit (9.2 CGPA)"]
+        N2["Python & Cloud Learning Journey"]
+        N3["4 Core Technical Pillars"]
+    end
+    
+    subgraph Profile_Panel ["Side Column (Right)"]
+        P1["Quick Profile Card"]
+        P2["Academic & Contact Details"]
+    end
+    
+    AboutSection --> Narrative_Panel
+    AboutSection --> Profile_Panel
+```
+
+
 
 
 
