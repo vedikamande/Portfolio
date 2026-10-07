@@ -406,8 +406,9 @@ button {
   box-shadow: 0 4px 10px rgba(99, 102, 241, 0.35);
 }
 
-.logo-text span {
-  color: var(--accent-primary);
+.logo-text {
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .nav-menu {

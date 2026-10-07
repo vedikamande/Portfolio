@@ -487,6 +487,20 @@ flowchart TD
     Brand --> Career_Up
 ```
 
+### Revision 1.11.0 — Uniform Typography Color for Brand Logo
+- **Change Description**: Unified the font color of the brand logo **Vedika Mande** across both header navigation and footer. Removed the secondary accent color split so that the full name displays in a single, consistent, polished font color (`var(--text-primary)`).
+- **Updated Logic & Component Changes**:
+  - `index.html`: Removed internal `<span>` around "Mande" in `.logo-text`.
+  - `style.css`: Updated `.logo-text` rule to apply `var(--text-primary)` uniformly.
+- **Brand Typography Flowchart**:
+
+```mermaid
+flowchart LR
+    VM["Brand Logo"] --> Mark["Icon Badge: VM (Gradient)"]
+    VM --> Text["Text: Vedika Mande (Single Uniform Color: --text-primary)"]
+```
+
+
 
 
 
