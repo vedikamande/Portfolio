@@ -10,7 +10,7 @@
 - **About Me**: Academic excellence (MCA CGPA 9.2 @ Vishwakarma University) and core pillars: Python & Backend, AWS Cloud Computing, Databases, and Java OOP.
 - **Filterable Skills Grid**: Interactive categories: Python & Backend, AWS & Cloud, Languages, Databases, and Developer Tools.
 - **Featured Projects**: In-depth architecture overviews with interactive modal previews:
-  - *Student Registration Portal* (Python, FastAPI, MongoDB, JWT Authentication)
+  - *Student Registration Portal* (Python, MongoDB, JWT Authentication, HTML/CSS/JS)
   - *Career Up Placement Consultant* (CMS, UX Design, Pitching & Documentation)
 - **Education Timeline**: Visual chronological history spanning MCA (CGPA 9.2), BCS (CGPA 8.13), HSC, and SSC.
 - **Verified Certifications**: Dedicated credential badges for Core Java (MKCL 120-hr), HackerRank SQL, Infosys Springboard Python, Great Learning OOP, and AWS Cloud Practitioner Essentials.

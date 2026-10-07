@@ -258,18 +258,18 @@ function initContactForm() {
 const projectData = {
   'student-portal': {
     title: 'Student Registration Portal',
-    category: 'Web Application & API',
+    category: 'Web Application & Database Project',
     duration: 'Academic Project',
-    stack: ['Python', 'FastAPI', 'MongoDB', 'JWT Authentication', 'HTML5', 'CSS3', 'JavaScript'],
-    summary: 'A web-based academic platform built to manage and automate admissions, CET applications, and student record inquiry with high data integrity and authentication security.',
+    stack: ['Python', 'MongoDB', 'JWT Authentication', 'HTML5', 'CSS3', 'JavaScript'],
+    summary: 'A web-based student registration portal built to manage student registrations, CET applications, and enquiry forms with validation and secure login.',
     features: [
-      'Engineered student registration, CET entrance application, and inquiry forms with comprehensive client and server validations.',
-      'Developed an administrative portal dashboard for authorized academic staff to review, update, and manage applicant dossiers.',
-      'Secured backend endpoints with JSON Web Token (JWT) stateless authorization, ensuring protected user routes.',
-      'Designed responsive UI components compatible across mobile devices, tablets, and desktop workstations.',
-      'Utilized MongoDB document storage for flexible schema handling of varied applicant academic histories.'
+      'Created student registration, CET application, and enquiry forms with field validations.',
+      'Built an easy-to-navigate admin dashboard to view and manage student records.',
+      'Implemented secure user login using JWT authentication.',
+      'Designed a responsive interface that works well on desktop and mobile screens.',
+      'Stored and managed student records reliably using MongoDB.'
     ],
-    architecture: 'Client (HTML/CSS/Vanilla JS) -> Asynchronous REST API (FastAPI) -> JWT Authentication Layer -> NoSQL Persistence (MongoDB)'
+    architecture: 'Frontend (HTML / CSS / JavaScript) -> Backend Logic (Python) -> Authentication (JWT) -> Database (MongoDB)'
   },
   'career-consultant': {
     title: 'Career Up Placement Consultant',

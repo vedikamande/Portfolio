@@ -265,4 +265,38 @@ flowchart TD
     VM --> AWS_Cloud_Track
 ```
 
+### Revision 1.3.0 — Beginner-Friendly Simplification & FastAPI Removal
+- **Change Description**: 
+  - Fully removed all references to FastAPI across the codebase, projects, and skills.
+  - Removed the subtitle sentence *"A glimpse into my academic trajectory, engineering principles, and what drives my passion for technology."*
+  - Refined all terminology into accessible, beginner-friendly language focusing on foundational Python, AWS cloud basics, database querying, and web fundamentals.
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Removed `FastAPI` from metadata, terminal code preview, about narrative, skill cards, and project tags.
+    - Updated Project 1 highlights to focus on Python, MongoDB, input validation, and JWT login.
+    - Simplified education description to clear, approachable language.
+  - `script.js`:
+    - Cleaned `projectData['student-portal']` stack and architecture to remove FastAPI.
+- **Beginner-Friendly Portfolio Flowchart**:
+
+```mermaid
+flowchart TD
+    Profile["Vedika Mande (MCA Student)"]
+    
+    subgraph Core_Focus ["Core Beginner-Friendly Focus"]
+        P1["Python Basics & Problem Solving"]
+        P2["AWS Cloud Fundamentals (EC2, S3, IAM)"]
+        P3["Database Queries (MySQL & MongoDB)"]
+        P4["Web Basics (HTML, CSS, JavaScript)"]
+    end
+    
+    subgraph Real_Projects ["Practical Projects"]
+        Proj1["Student Registration Portal (Python + MongoDB + JWT)"]
+        Proj2["Career Up Placement Consultant (Wix + UI/UX)"]
+    end
+    
+    Profile --> Core_Focus --> Real_Projects
+```
+
+
 
