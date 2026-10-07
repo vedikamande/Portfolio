@@ -1,14 +1,14 @@
 # Vedika Mande — Personal Portfolio Website
 
-> A clean, modern, and responsive personal portfolio web application built with **HTML5**, **Vanilla CSS3**, and **Vanilla JavaScript (ES6+)**.
+> Portfolio of **Vedika Mande** — MCA Scholar, **Python Developer**, and **AWS & Cloud Computing Learner**, built with **HTML5**, **Vanilla CSS3**, and **Vanilla JavaScript (ES6+)**.
 
 ---
 
 ## 🌟 Key Features
 
-- **Hero Section**: Personal branding, interactive status pill, quick contact chips, and animated code terminal card.
-- **About Me**: Academic narrative (MCA @ Vishwakarma University, BCS @ MGM University) and core engineering pillars.
-- **Filterable Skills Grid**: Categorized view across Languages, Databases, Web & Backend, and Tools & Cloud.
+- **Hero Section**: Personal branding, interactive status badge (`Python Developer & AWS Cloud Computing Learner`), quick contact chips, and interactive Python terminal widget.
+- **About Me**: Academic excellence (MCA CGPA 9.2 @ Vishwakarma University) and core pillars: Python & Backend, AWS Cloud Computing, Databases, and Java OOP.
+- **Filterable Skills Grid**: Interactive categories: Python & Backend, AWS & Cloud, Languages, Databases, and Developer Tools.
 - **Featured Projects**: In-depth architecture overviews with interactive modal previews:
   - *Student Registration Portal* (Python, FastAPI, MongoDB, JWT Authentication)
   - *Career Up Placement Consultant* (CMS, UX Design, Pitching & Documentation)

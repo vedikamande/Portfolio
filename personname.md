@@ -226,3 +226,43 @@ flowchart LR
     B & C & D & E & F --> G["Designation: Software Developer"]
 ```
 
+### Revision 1.2.0 — Prominent Integration of Python Developer & AWS Cloud Computing Learner
+- **Change Description**: Elevated **Python Developer** as the primary programming identity and **AWS & Cloud Computing Learner** as the key cloud infrastructure focus across the web application.
+- **Updated Logic & Component Changes**:
+  - `<head>`: Refined title tag and meta description highlighting Python Developer and AWS Cloud Computing Learner.
+  - **Hero Section**:
+    - Hero Badge updated to: `<i class="fa-brands fa-python"></i> Python Developer & AWS Cloud Computing Learner`.
+    - Hero Headline: "Python Developer & AWS Cloud Computing Learner".
+    - Visual Profile Card role updated to "Python Developer & AWS Cloud Learner".
+    - Terminal Widget updated to `vedika_dev.py` featuring AWS Cloud Practitioner and Python core stack.
+  - **About Me Section**: Added explicit narrative about Infosys Springboard Python and AWS Cloud Practitioner Essentials curriculum (EC2, S3, IAM, Cloud Economics).
+  - **About Pillars**: Re-aligned into 4 pillars: Python & Backend APIs, AWS & Cloud Computing, Database Engineering, and Java & OOP.
+  - **Skills Section Filter**: Re-architected interactive filter categories to feature dedicated `Python & Backend` and `AWS & Cloud` buttons.
+- **Competency & Cloud Flowchart**:
+
+```mermaid
+flowchart TD
+    VM["Vedika Mande"]
+    
+    subgraph Python_Track ["Python Developer Track"]
+        PY1["Python Fundamentals (Infosys Certified)"]
+        PY2["Data Structures & Algorithms"]
+        PY3["FastAPI Web Framework"]
+        PY4["Database Integration (MongoDB / MySQL)"]
+        PY1 --> PY2 --> PY3 --> PY4
+    end
+
+    subgraph AWS_Cloud_Track ["AWS Cloud Computing Learner Track"]
+        AWS1["AWS Cloud Practitioner Essentials"]
+        AWS2["Amazon EC2 (Compute)"]
+        AWS3["Amazon S3 (Object Storage)"]
+        AWS4["AWS IAM (Security & Governance)"]
+        AWS5["Cloud Pricing & Shared Responsibility"]
+        AWS1 --> AWS2 & AWS3 & AWS4 & AWS5
+    end
+
+    VM --> Python_Track
+    VM --> AWS_Cloud_Track
+```
+
+
