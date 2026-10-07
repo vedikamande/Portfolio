@@ -258,12 +258,12 @@ function initContactForm() {
 const projectData = {
   'student-portal': {
     title: 'Student Registration Portal',
-    category: 'Web Application & Database Project',
-    duration: 'Academic Project',
+    category: 'Academic Group Project',
+    duration: 'Academic Group Project',
     stack: ['Python', 'MongoDB', 'JWT Authentication', 'HTML5', 'CSS3', 'JavaScript'],
-    summary: 'A web-based student registration portal built to manage student registrations, CET applications, and enquiry forms with validation and secure login.',
+    summary: 'An academic group project built to manage student registrations, CET applications, and enquiry forms with validation and secure login.',
     features: [
-      'Created student registration, CET application, and enquiry forms with field validations.',
+      'Collaborated with a team to create student registration, CET application, and enquiry forms with field validations.',
       'Built an easy-to-navigate admin dashboard to view and manage student records.',
       'Implemented secure user login using JWT authentication.',
       'Designed a responsive interface that works well on desktop and mobile screens.',

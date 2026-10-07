@@ -380,6 +380,55 @@ flowchart LR
     PY --> C5["Basic Problem Solving"]
 ```
 
+### Revision 1.7.0 — Designation of Student Registration Portal as Academic Group Project
+- **Change Description**: Explicitly tagged the **Student Registration Portal** project as an **Academic Group Project** across all user-facing interfaces, reflecting team-based academic collaboration.
+- **Updated Logic & Component Changes**:
+  - `index.html`:
+    - Updated project badge: `<i class="fa-solid fa-users"></i> Academic Group Project`.
+    - Category label updated to `Academic Group Project`.
+    - Updated summary and first highlight bullet point to reflect academic group collaboration.
+  - `script.js`:
+    - Updated `projectData['student-portal']` category and duration to `'Academic Group Project'`.
+    - Updated first feature bullet point to reflect collaborative academic work.
+- **Projects Classification Flowchart**:
+
+```mermaid
+graph TD
+    Projects["Vedika Mande Projects"]
+    
+    subgraph P1 ["Student Registration Portal"]
+        P1Type["Type: Academic Group Project"]
+        P1Tech["Stack: Python, MongoDB, JWT, HTML/CSS/JS"]
+        P1Contrib["Role: Form Validation, Admin Dashboard, Login & DB"]
+    end
+    
+    subgraph P2 ["Career Up Placement Consultant"]
+        P2Type["Type: Collaborative Team Project"]
+        P2Tech["Stack: Wix, UI/UX, MS Office"]
+        P2Contrib["Role: Pitch Presentation, User Journeys & Docs"]
+    end
+    
+    Projects --> P1
+    Projects --> P2
+```
+
+### Revision 1.8.0 — Streamlining Project Description Phrasing
+- **Change Description**: Refined the initial highlight sentence of the **Student Registration Portal** to eliminate repetitive phrasing. The sentence now reads cleanly and professionally:
+  > *"Collaborated with a team to develop a web-based Student Registration Portal using Python, MongoDB, HTML, CSS, and JavaScript."*
+- **Updated Logic & Component Changes**:
+  - `index.html`: Refined first bullet point in `.project-highlights`.
+  - `script.js`: Synchronized modal feature bullet with identical natural phrasing.
+- **Content Hierarchy Flowchart**:
+
+```mermaid
+flowchart LR
+    Badge["Badge: Academic Group Project"] --> Action["Action: Collaborated with a team"]
+    Action --> Target["Product: Web-based Student Registration Portal"]
+    Target --> Tech["Stack: Python, MongoDB, HTML, CSS, JS"]
+```
+
+
+
 
 
 
